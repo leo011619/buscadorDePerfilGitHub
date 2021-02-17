@@ -1,0 +1,69 @@
+/* =========================================== GERAL ===================================================*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* =========================================== HEADER ===================================================*/
+h3{
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: teal;
+    font-family: 'Fira Sans', sans-serif;
+}
+header{
+    margin: 5vh;
+}
+
+
+/* =========================================== CARD ===================================================*/
+
+#card{
+    display: flex;
+    flex-direction: row;   
+    justify-content: flex-start;
+}
+
+
+/* =========================================== AVATAR ===================================================*/
+
+img{
+    border-radius:50%;
+    margin-left: 3vh;
+}
+/* =========================================== INFOS ===================================================*/
+#infos{
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vh;
+  margin-top: 4vh;
+}
+
+#usuario{
+    padding-bottom: 5px;
+}
+  
+
+/* =========================================== BIO ===================================================*/
+#bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+
+}
+
+/* =========================================== FOOTER ===================================================*/
+footer{
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: teal;
+    font-family: 'Fira Sans', sans-serif;
+}
+a{
+    color: whitesmoke;
+}
