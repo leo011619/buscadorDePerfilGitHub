@@ -5,14 +5,12 @@
 var busca = document.querySelector("#user");
 var nomeUser = document.querySelector("#usuario");
 var bioUser = document.querySelector("#bio");
-var imagemUser = document.querySelector("#imagem-usuario");
+var imagemUser = document.querySelector("imgUser");
 var dtCadAttUser = document.querySelector("#datas");
-
 
 var botao = document.querySelector("#button-addon2")
 botao.onclick = function () {
-
-
+ 
     fetch(`https://api.github.com/users/${busca.value}`).then(usuario => {
        if( usuario.status === 404){
            return alert('Usuario não encontrado!')
@@ -30,10 +28,9 @@ botao.onclick = function () {
             bioUser.innerHTML = perfil.bio;
             dtCadAttUser.innerHTML = `Desde: ${dtcad.slice(8, 10)}/${dtcad.slice(5, 7)}/${dtcad.slice(0, 4)} | Ultima atualização: ${dtatt.slice(8, 10)}/${dtatt.slice(5, 7)}/${dtatt.slice(0, 4)}`;
             ;
+            
+            document.querySelector("#imgUser").src = perfil.avatar_url;
 
-            var myImage = new Image(200, 200);
-            myImage.src = perfil.avatar_url;
-            document.getElementById('avatar').appendChild(myImage);
             document.querySelector('#avatar').href = `https://github.com/${perfil.login}`
 
 
