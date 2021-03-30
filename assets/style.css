@@ -40,8 +40,8 @@ img{
 #infos{
   display: flex;
   flex-direction: column;
-  margin-left: 8vh;
-  margin-top: 4vh;
+  margin: 4vh 0vh 0vh 8vh;
+  
 }
 
 #usuario{
@@ -69,4 +69,24 @@ footer{
 }
 a{
     color: whitesmoke;
+}
+#avatar{
+    color:white
+}
+
+@media only screen and (max-width: 498px){
+    #infos{
+        margin-left: 4vh;
+        align-items: center;
+    }
+    #card{
+        flex-direction: column;
+        align-items: center;
+    }
+    #bio{
+        text-align: center;
+    }
+    #usuario{
+        padding-bottom: 10px;
+    }
 }

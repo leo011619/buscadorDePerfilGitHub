@@ -1,7 +1,3 @@
-
-
-
-
 var busca = document.querySelector("#user");
 var nomeUser = document.querySelector("#usuario");
 var bioUser = document.querySelector("#bio");
@@ -9,8 +5,8 @@ var imagemUser = document.querySelector("imgUser");
 var dtCadAttUser = document.querySelector("#datas");
 
 var botao = document.querySelector("#button-addon2")
-botao.onclick = function () {
- 
+botao.addEventListener ("click", buscandoInfos) 
+function buscandoInfos() {
     fetch(`https://api.github.com/users/${busca.value}`).then(usuario => {
        if( usuario.status === 404){
            return alert('Usuario não encontrado!')
